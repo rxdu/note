@@ -64,18 +64,18 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 Check the following configurations for Xenomai
 
 ```bash
-* General setup ---\> 
+* General setup ---> 
 - Local version - append to kernel release : "-ti-xenomai-r107"
 - Stack Protector buffer overflow detection: Disable 
-* Kernel Features  ---\>
+* Kernel Features  --->
 - Preemption Model : select "Preemptible Kernel (Low-Latency Desktop)"                           
 - Timer frequency : change to 1000Hz
 - [] Allow for memory compaction : Disable
 - [] Contiguous Memory Allocator : Disable
-* CPU Power Management  ---\>
+* CPU Power Management  --->
 - [] CPU Frequency scaling : Disable
     
-* Kernel hacking  ---\>
+* Kernel hacking  --->
 - [] KGDB: kernel debugger : Disable
 ```
 
@@ -206,7 +206,7 @@ uname_r=4.9.88-ti-xenomai-r107
 Update fstab (Note you may need to change "/dev/mmcblk0p2" according to your SD configuration)
 
 ```bash
-$ sudo sh -c "echo '/dev/mmcblk0p2  /  auto  errors=remount-ro  0  1' \>\> /media/rootfs/etc/fstab"
+$ sudo sh -c "echo '/dev/mmcblk0p2  /  auto  errors=remount-ro  0  1' >> /media/rootfs/etc/fstab"
 ```
 
 Update hostname (default is "arm")

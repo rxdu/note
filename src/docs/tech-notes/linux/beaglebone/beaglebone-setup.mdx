@@ -3,7 +3,7 @@ title: Beaglebone Setup
 description: Basic setup for Beaglebone
 ---
 
-#### Flash the eMMC
+## Flash Image to eMMC
 
 Follow reference [1] to flash the OS to the eMMC storage. A brief summary:
 
@@ -19,18 +19,18 @@ You can login to the system after the board boots up
 $ ssh debian@192.168.7.2 # default password: temppwd
 ```
 
-#### Add new user
+## Add New User
 
 Now you can add your own account and delete the default one
 
 ```bash
-$ sudo adduser --ingroup users <USERNAME\>
-$ sudo adduser <YOUR_USERNAME\> sudo
+$ sudo adduser --ingroup users <USERNAME>
+$ sudo adduser <YOUR_USERNAME> sudo
 $ logout
 $ sudo deluser --remove-home user
 ```
 
-#### Setup Wifi
+## Setup Wifi
 
 You can use "connman" to manage the wireless network. But I personally prefer using the old way.
 
@@ -43,7 +43,7 @@ $ systemctl disable connman.service
 * Generate WPA passphrase for your WiFi
 
 ```bash
-$ wpa_passphrase <ssid\> <password\>
+$ wpa_passphrase <ssid> <password>
 ```
 
 * Update /etc/network/interfaces
@@ -59,10 +59,10 @@ iface lo inet loopback
 auto wlan0
 iface wlan0 inet dhcp
     wpa-ssid ExampleWifi
-    wpa-psk <wpa-psk-generated-by-wpa-passphrase-command\>   
+    wpa-psk <wpa-psk-generated-by-wpa-passphrase-command>   
 ```
 
-#### Mount "/usr" and "/home" on SD card
+## Mount "/usr" and "/home" on SD card
 
 The BeagleBone Blue has 4G on-board eMMC flash storage. It could be enough for many applications. But for experimental projects, it's more convenient to have more space so that you don't need to worry too much about filling the eMMC flash up when installing new packages.
 
@@ -87,8 +87,8 @@ $ sudo rsync -ahv --progress /home/ /tmp/home/
 # 6. update /etc/fstab to reflect the change
 $ sudo lsblk -no UUID /dev/mmcblk0p1 # get UUID of /dev/mmcblk0p1
 # add two lines in /etc/fstab
-$ UUID=<ID-YOU-GOT-FROM-ABOVE-CMD\> /usr ext4    defaults 0 1
-$ UUID=<ID-YOU-GOT-FROM-ABOVE-CMD\> /home ext4    defaults 0 1
+$ UUID=<ID-YOU-GOT-FROM-ABOVE-CMD> /usr ext4    defaults 0 1
+$ UUID=<ID-YOU-GOT-FROM-ABOVE-CMD> /home ext4    defaults 0 1
 or
 $ /dev/mmcblk0p1 /usr ext4 defaults 0 1
 $ /dev/mmcblk0p2 /home ext4 defaults 0 1
@@ -96,7 +96,7 @@ $ /dev/mmcblk0p2 /home ext4 defaults 0 1
 $ df -h
 ```
 
-#### Add a Swap File
+## Add a Swap File
 
 Sometimes a swap area may be needed to compile a large project on beaglebone black. Instead of setting up a swap partition, you can also use a swap file.
 
@@ -119,7 +119,7 @@ $ sudo nano /etc/fstab
 
 Reboot the board and use htop to check if the swap file is set up correctly.
 
-#### Update Kernel
+## Update Kernel
 
 You can upgrade or change to a Preempt-RT patched kernel using the script provided in the Debian OS from Beaglebone
 
@@ -133,7 +133,7 @@ Refer to [5] for additiona options.
 
 Note that if you use the kernel from TI channel (for example, use "--ti-rt-channel" option), you might experience errors related to the PINMUX helper driver. 
 
-#### Robotics Cape library
+## Robotics Cape library
 
 TI channel kernels have more complete support to PRU drivers so you may want to use a kernel from the TI channel if you're using the Robotics Cape or Beaglebone Blue.[7]
 

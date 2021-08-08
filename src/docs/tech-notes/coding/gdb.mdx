@@ -3,7 +3,7 @@ title: Using GDB Debugger
 description: A brief tutorial for using GDB to debug your program
 ---
 
-#### Introduction
+## Introduction
 
 GDB debugger can be a very powerful tool for finding the cause of unexpected behaviors of your program. In a GDB debugging session, you can step your code by line or by instruction and you can also stop your code at a specific line, a function or an address. When your program stops, you can check the values of the variables at that moment. You can even change a variable as you want. Moreover, it allows you to check the status of the stack and inspect how the function are called. The use of GDB may seem not to be as easy as printf() but it can be much more helpful when you're trying to find a deeply hidden bug. Actually it's not as difficut to learn as it seems to be.
 
@@ -21,7 +21,7 @@ The official manual of GDB can be a good reference after you have already learne
 
 The following are my notes for quick reference of the most frequently used commands. Some of them are from the above materials.
 
-#### Background Knowledge
+## Background Knowledge
 
 It can be very helpful to understand stack and stack frames when you use GDB for debugging. This [page](http://www.dirac.org/linux/gdb/02a-Memory_Layout_And_The_Stack.php#wherearewegoingtogo) from the tutorial "Using GNU's GDB Debugger" gives good explanation about them.
 
@@ -31,7 +31,7 @@ In addition to stack and stack frames, check topic "operating system" for more i
 
 Another thing that you need to remember before starting a gdb debugging session is that you need to use "-g" flag when compiling your code to include debugging information in the generated executable file.
 
-#### Frequently Used Commands
+## Frequently Used Commands
 
 * Starting a debugging session
 

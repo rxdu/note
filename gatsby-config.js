@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Rocket Docs`,
-    defaultTitle: `Rocket Docs`,
-    siteTitleShort: `Rocket Docs`,
-    siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
-    siteUrl: `https://rocketdocs.netlify.app`,
-    siteAuthor: `@rocketseat`,
+    siteTitle: `Ruixiang's Notes`,
+    defaultTitle: `Ruixiang's Notes`,
+    siteTitleShort: `Ruixiang's Notes`,
+    siteDescription: `Technical notes created by Ruixiang Du`,
+    siteUrl: `https://note.rdu.im`,
+    siteAuthor: `Ruixiang Du`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#8257E6`,
@@ -20,6 +20,20 @@ module.exports = {
         docsPath: `src/docs`,
         repositoryUrl: `https://github.com/rocketseat/gatsby-themes`,
         baseDir: `examples/gatsby-theme-docs`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+       plugins: [
+          {
+              resolve: `gatsby-remark-katex`,
+              options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+              }
+          }
+        ],
       },
     },
     {

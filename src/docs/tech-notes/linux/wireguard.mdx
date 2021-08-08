@@ -3,12 +3,12 @@ title: Wireguard
 description: Setup Wireguard on AWS
 ---
 
-#### Tested Environment
+## Tested Environment
 
 - Debian 10.5 on AWS
 - Ubuntu 20.04 on AWS
 
-#### Install wireguard on server
+## Install wireguard on server
 
 ```bash
 $ sudo apt-get install wireguard-dkms wireguard-tools linux-headers-$(uname -r)
@@ -22,7 +22,7 @@ Next we need to enable IP Forwarding. Open "/etc/sysctl.conf" and search for the
 net.ipv4.ip_forward=1
 ```
 
-#### Generate server and client keys
+## Generate server and client keys
 
 You will need root privilege to manipuate the "/etc/wireguard" directory
 
@@ -30,13 +30,13 @@ You will need root privilege to manipuate the "/etc/wireguard" directory
 $ sudo -i 
 $ cd /etc/wireguard
 $ umask 077
-$ wg genkey | tee server_private_key | wg pubkey \> server_public_key
+$ wg genkey | tee server_private_key | wg pubkey > server_public_key
 ```
 
 You will need to create a key pair for each client  (more deails below, not needed for now)
 
 ```bash
-$ wg genkey | tee <client_private_key_name\> | wg pubkey \> <client_public_key_name\>
+$ wg genkey | tee <client_private_key_name> | wg pubkey > <client_public_key_name>
 ```
 
 ## Generate server and client keys
@@ -47,16 +47,16 @@ You will need root privilege to manipuate the "/etc/wireguard" directory
 $ sudo -i 
 $ cd /etc/wireguard
 $ umask 077
-$ wg genkey | tee server_private_key | wg pubkey \> server_public_key
+$ wg genkey | tee server_private_key | wg pubkey > server_public_key
 ```
 
 You will need to create a key pair for each client  (more deails below, not needed for now)
 
 ```bash
-$ wg genkey | tee <client_private_key_name\> | wg pubkey \> <client_public_key_name\>
+$ wg genkey | tee <client_private_key_name> | wg pubkey > <client_public_key_name>
 ```
 
-#### Create server configuration file
+## Create server configuration file
 
 Create a file "**/etc/wireguard/wg0.conf"** with the following content
 
@@ -67,10 +67,10 @@ SaveConfig = true
 PostUp = /etc/wireguard/iptable-set.sh
 PostDown = /etc/wireguard/iptable-reset.sh
 ListenPort = 51820
-PrivateKey = <insert server_private_key\>
+PrivateKey = <insert server_private_key>
 
 [Peer]
-PublicKey = <insert client_public_key\>
+PublicKey = <insert client_public_key>
 AllowedIPs = 10.200.200.2/32
 
 ```
@@ -443,25 +443,25 @@ $ sudo wg-quick down wg0
 
 ### Setup clients
 
-#### Server side
+## Server side
 
 As mentioned above, you will have create a key pair for each client, for example:
 
 ```text
-$ wg genkey | tee rdu_acer_private.key | wg pubkey \> rdu_acer_public.key
+$ wg genkey | tee rdu_acer_private.key | wg pubkey > rdu_acer_public.key
 ```
 
 Register the client on the server
 
 ```bash
-$ wg set wg0 peer <new_client_public_key\> allowed-ips <new_client_vpn_IP\>/32
+$ wg set wg0 peer <new_client_public_key> allowed-ips <new_client_vpn_IP>/32
 ```
 
 In the following client setup part, we will assume you've assigned 10.200.200.2/32 to the client rdu-acer. 
 
 **You need to restart the "wg0" interface to make this change into effect.**
 
-#### Client side
+## Client side
 
 You can either set up the VPN profile on your device manually or from a QR code
 
@@ -481,12 +481,12 @@ $ nano /etc/wireguard/wg0-acer.conf
 ```text
 [Interface]
 Address = 10.200.200.2/32
-PrivateKey = <insert client_private_key\>
+PrivateKey = <insert client_private_key>
 DNS = 10.200.200.1
 
 [Peer]
-PublicKey = <insert server_public_key\>
-Endpoint = <VPN-Server-Public-IP\>:<ListenPort\>
+PublicKey = <insert server_public_key>
+Endpoint = <VPN-Server-Public-IP>:<ListenPort>
 AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 25
 ```
@@ -516,7 +516,7 @@ DNS = 10.200.200.1
 [Peer]
 PublicKey = server_public_key
 AllowedIPs = 0.0.0.0/0
-Endpoint = <VPN-Server-Public-IP\>:<ListenPort\>
+Endpoint = <VPN-Server-Public-IP>:<ListenPort>
 PersistentKeepalive = 25
 ```
 

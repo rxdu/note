@@ -5,7 +5,7 @@ description: ST LSM6DSM IIO driver
 
 The workspace is assumed to be at "~/beaglebone" and everything will be inside this folder by default in the following steps.
 
-#### Clone Linux kernel source
+## Fetch Linux kernel source
 
 * Beaglebone Linux Kernel ()
 
@@ -25,7 +25,7 @@ The folder "STMems_Linux_IIO_drivers" will be refered as the "driver source dire
 
 **Note**: you will need to switch to a different branch accordingly if you want to use a different Linux kernel version.
 
-#### Integrate IIO drivers 
+## Integrate IIO drivers 
 
 Follow the instructions in README.md at https://github.com/STMicroelectronics/STMems_Linux_IIO_drivers/tree/linux-4.19.y-gh 
 
@@ -45,12 +45,12 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 You would need to update the following configurations. Additional options might be needed according to your application:
 
 ```
-* General setup ---\> 
+* General setup ---> 
     - Local version - append to kernel release : "-pb-imu-rt"
-* Kernel Features  ---\>
+* Kernel Features  --->
     - Timer frequency : change to 1000Hz
-* Device Drivers ---\>
-    - Industrial I/O support ---\>
+* Device Drivers --->
+    - Industrial I/O support --->
         - Mark your driver module as "M"
 ```
 
@@ -68,7 +68,7 @@ You will get 3 .deb files to be installed on the pocketbeagle, e.g.:
 
 Copy and install on pocketbeagle with "dpkg" command.
 
-#### Update device tree overlay
+## Update device tree overlay
 
 * Build the device tree overlay
 
@@ -207,6 +207,6 @@ debian@beaglebone:/sys/bus/iio/devices/iio:device1$ cat in_accel_z_raw
 17111
 ```
 
-**Reference**
+## Reference
 
 * [1] https://wiki.analog.com/resources/tools-software/linux-drivers/iio-inertial-measurement-units/adis16475#trigger_management

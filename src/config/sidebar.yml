@@ -1,5 +1,7 @@
 # Sidebar navigation
 
+- label: Back to Main Page
+  link: https://rdu.im
 - label: Linux
   items:
     - label: 'Command'
@@ -12,14 +14,14 @@
       link: '/tech-notes/linux/raspberrypi'
     - label: 'BeagleBone'
       link: '/tech-notes/linux/beaglebone'
-- label: Programming
+- label: Coding
   items:
     - label: 'GDB'
-      link: '/tech-notes/programming/gdb'
+      link: '/tech-notes/coding/gdb'
     - label: 'Valgrind'
-      link: '/tech-notes/programming/valgrind'
+      link: '/tech-notes/coding/valgrind'
     - label: 'Endianness'
-      link: '/tech-notes/programming/endianness'
+      link: '/tech-notes/coding/endianness'
 - label: Robotics
   items:
     - label: 'Control'
@@ -40,7 +42,7 @@
       link: '/tech-notes/howto/recover-stm32-swd'
     - label: 'Xbox Linux Bluetooth'
       link: '/tech-notes/howto/xbox-controller-ubuntu-bluetooth'
-- label: Online Resource
+- label: Resource
   items:
     - label: 'Tutorial'
       link: '/collection/resource/tutorial'
