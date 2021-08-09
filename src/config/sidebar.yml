@@ -32,6 +32,8 @@
       link: '/tech-notes/robotics/simulation'
     - label: 'Visualization'
       link: '/tech-notes/robotics/visual'
+    - label: 'Robot System'
+      link: '/tech-notes/robotics/robot_system'
     - label: 'Book List'
       link: '/tech-notes/robotics/refbook'
 - label: HOWTOs
