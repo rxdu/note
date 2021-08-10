@@ -16,12 +16,14 @@
       link: '/tech-notes/linux/beaglebone'
 - label: Coding
   items:
+    - label: 'Basics'
+      link: '/tech-notes/coding/basics'
     - label: 'GDB'
       link: '/tech-notes/coding/gdb'
     - label: 'Valgrind'
       link: '/tech-notes/coding/valgrind'
-    - label: 'Endianness'
-      link: '/tech-notes/coding/endianness'
+    - label: 'C++ Notes'
+      link: '/tech-notes/coding/cpp'
 - label: Robotics
   items:
     - label: 'Control'
