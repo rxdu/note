@@ -89,11 +89,11 @@ V-REP provides a very powerful tool to create and modify mechanical model. It's 
 
 Download the stl file for the hummingbird quadrotor from the AscTec [wiki](http://wiki.asctec.de/display/AR/CAD+Models). Import the model into V-REP.
 
-![Import STL](../../images/simulation/vrep_import_quad.png)
+![Import STL](../../../images/simulation/vrep_import_quad.png)
 
 If you want the simulated quadrotor to look better, you can now divide the model into smaller parts and apply textures to different parts.
 
-![Model Texture](../../images/simulation/vrep_model_texture.png)
+![Model Texture](../../../images/simulation/vrep_model_texture.png)
 
 ### Create a simplified dynamic model for simulation
 
@@ -101,7 +101,7 @@ For this imported stl model, it's usually non-convex and not proper for dynamic 
 
 In this example, the quadrotor frame is abstracted as a sphere with four cuboid shapes.
 
-![Visual and Dynamic Model](../../images/simulation/vrep_two_models.png)
+![Visual and Dynamic Model](../../../images/simulation/vrep_two_models.png)
 
 Don't forget the adjust the properties of the dynamic model, such as mass, inertia.
 
@@ -109,13 +109,13 @@ Don't forget the adjust the properties of the dynamic model, such as mass, inert
 
 V-REP provides the model of a propeller with particle simulation so you can use it directly on the quadrotor. You can find the model from /components/locomotion in the model browser. Add four of the propeller into the scene and adjust the position of each.
 
-![Add Propellers](../../images/simulation/vrep_quad_prop.png)
+![Add Propellers](../../../images/simulation/vrep_quad_prop.png)
 
 If you want the simulated Hummingbird to be more like the real one in appearance, you can hide the visible parts of the provided propeller model and use a better-looking propeller model. For example, you can download this propeller model from [GrabCAD site](https://grabcad.com/library/8x3-8-propeller-1).
 
 V-REP also provides models for the sensors. Simply drag a gyro and a accelerometer into the scene and place them at a proper position on the quadrotor. The final quadrotor model is shown in the image below. You can also check the hierarchy structure of the simulated robot in this screenshot.
 
-![Simulated Hummingbird](../../images/simulation/vrep_quad_final.png)
+![Simulated Hummingbird](../../../images/simulation/vrep_quad_final.png)
 
 ### Write code to interface with the quadrotor
 
