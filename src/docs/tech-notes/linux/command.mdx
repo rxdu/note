@@ -77,6 +77,21 @@ $ sudo snap install pdftk
 $ pdftk file1.pdf file2.pdf cat output result.pdf
 ```
 
+## Extract Pages from PDFs
+
+```bash
+$ sudo apt-get install qpdf
+# extract page 1 to 5 from input.pdf to output.pdf
+$ qpdf input.pdf --pages . 1-5 -- output.pdf
+```
+
+## Convert PDF to JPG
+
+```bash
+$ sudo apt install libvips-tools
+$ vips copy input.pdf[dpi=300] output.jpg
+```
+
 ## Create Gif Animation
 
 ```bash
