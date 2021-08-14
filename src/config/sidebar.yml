@@ -4,13 +4,11 @@
   link: https://rdu.im
 - label: Linux
   items:
-    - label: 'Command'
-      link: '/tech-notes/linux/command'
-    - label: 'CAN Bus'
-      link: '/tech-notes/linux/canbus'
-    - label: 'Wireguard'
-      link: '/tech-notes/linux/wireguard'
-    - label: 'Raspberry Pi'
+    - label: 'Generic'
+      link: '/tech-notes/linux/generic'
+    - label: 'Cloud'
+      link: '/tech-notes/linux/cloud'
+    - label: 'RaspberryPi'
       link: '/tech-notes/linux/raspberrypi'
     - label: 'BeagleBone'
       link: '/tech-notes/linux/beaglebone'
