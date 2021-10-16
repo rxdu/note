@@ -1,9 +1,19 @@
 ---
 title: Build IMU IIO driver for Pocketbeagle 
-description: ST LSM6DSM IIO driver
+description: ST IIO driver
 ---
 
 The workspace is assumed to be at "~/beaglebone" and everything will be inside this folder by default in the following steps.
+
+## Install tools
+
+Install tools:
+
+```bash
+$ sudo apt install git bc bison flex libssl-dev make lzop
+```
+
+Install the same version of gcc compiler with the one in your debian image on Beaglebone. 
 
 ## Fetch Linux kernel source
 
