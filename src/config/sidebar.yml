@@ -44,6 +44,8 @@
       link: '/tech-notes/howto/recover-stm32-swd'
     - label: 'Xbox Linux Bluetooth'
       link: '/tech-notes/howto/xbox-controller-ubuntu-bluetooth'
+    - label: 'Fix Lightsail SSH'
+      link: '/tech-notes/howto/fix-aws-lightsail-browser-ssh'
 - label: Resource
   items:
     - label: 'Tutorial'
