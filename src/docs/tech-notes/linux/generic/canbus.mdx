@@ -24,6 +24,7 @@ auto can0
     iface can0 inet manual
     pre-up /sbin/ip link set can0 type can bitrate 1000000 
     up /sbin/ifconfig can0 up
+    post-up /sbin/ip link set can0 txqueuelen 10000
     down /sbin/ifconfig can0 down
 ```
 

@@ -19,6 +19,18 @@ You can login to the system after the board boots up
 $ ssh debian@192.168.7.2 # default password: temppwd
 ```
 
+## Setup Ethernet over USB for Pocketbeagle
+
+Add the following lines to /etc/network/interfaces by modifying the files directly after you mount the SD card to your computer
+
+```
+iface usb0 inet static
+    address 192.168.7.2
+    netmask 255.255.255.0
+    gateway 192.168.7.1
+    dns-nameservers 8.8.8.8
+```
+
 ## Add New User
 
 Now you can add your own account and delete the default one
@@ -46,7 +58,11 @@ $ systemctl disable connman.service
 $ wpa_passphrase <ssid> <password>
 ```
 
-* Update /etc/network/interfaces
+* Update iface usb0 inet static
+    address 192.168.7.2
+    netmask 255.255.255.0
+    gateway 192.168.7.1
+    dns-nameservers 8.8.8.8
 
 ```bash
 $ sudo nano /etc/network/interfaces
