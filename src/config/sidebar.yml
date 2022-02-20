@@ -2,16 +2,16 @@
 
 - label: Back to Main Page
   link: https://rdu.im
-- label: Linux
+- label: OS
   items:
-    - label: 'Generic'
-      link: '/tech-notes/linux/generic'
-    - label: 'Cloud'
-      link: '/tech-notes/linux/cloud'
+    - label: 'Linux'
+      link: '/tech-notes/os/linux'
+    - label: 'RTOS'
+      link: '/tech-notes/os/rtos'
     - label: 'RaspberryPi'
-      link: '/tech-notes/linux/raspberrypi'
+      link: '/tech-notes/os/raspberrypi'
     - label: 'BeagleBone'
-      link: '/tech-notes/linux/beaglebone'
+      link: '/tech-notes/os/beaglebone'
 - label: Coding
   items:
     - label: 'Basics'
@@ -24,28 +24,24 @@
       link: '/tech-notes/coding/cpp'
 - label: Robotics
   items:
-    - label: 'Control'
-      link: '/tech-notes/robotics/control'
+    - label: 'Perception'
+      link: '/tech-notes/robotics/perception'
     - label: 'Planning'
       link: '/tech-notes/robotics/planning'
+    - label: 'Control'
+      link: '/tech-notes/robotics/control'
     - label: 'Simulation'
       link: '/tech-notes/robotics/simulation'
     - label: 'Visualization'
-      link: '/tech-notes/robotics/visual'
+      link: '/tech-notes/robotics/visualization'
     - label: 'Robot System'
       link: '/tech-notes/robotics/robot_system'
     - label: 'Book List'
       link: '/tech-notes/robotics/refbook'
 - label: HOWTOs
   items:
-    - label: 'Create SSH Key'
-      link: '/tech-notes/howto/create-ssh-key'
-    - label: 'Recover STM32 SWD'
-      link: '/tech-notes/howto/recover-stm32-swd'
-    - label: 'Xbox Linux Bluetooth'
-      link: '/tech-notes/howto/xbox-controller-ubuntu-bluetooth'
-    - label: 'Fix Lightsail SSH'
-      link: '/tech-notes/howto/fix-aws-lightsail-browser-ssh'
+    - label: 'HOWTO List'
+      link: '/tech-notes/howto/howto-list'
 - label: Resource
   items:
     - label: 'Tutorial'
@@ -56,8 +52,8 @@
       link: '/collection/misc/blog'
     - label: 'Software'
       link: '/collection/resource/software'
-    - label: 'Reference'
-      link: '/collection/resource/reference'
+    # - label: 'Reference'
+    #   link: '/collection/resource/reference'
 # - label: Miscellaneous
 #   items:
 #     - label: 'Tech Blogs'
