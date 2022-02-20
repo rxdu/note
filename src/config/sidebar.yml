@@ -2,26 +2,24 @@
 
 - label: Back to Main Page
   link: https://rdu.im
-- label: OS
+- label: System
   items:
     - label: 'Linux'
-      link: '/tech-notes/os/linux'
+      link: '/tech-notes/system/linux'
     - label: 'RTOS'
-      link: '/tech-notes/os/rtos'
+      link: '/tech-notes/system/rtos'
     - label: 'RaspberryPi'
-      link: '/tech-notes/os/raspberrypi'
+      link: '/tech-notes/system/raspberrypi'
     - label: 'BeagleBone'
-      link: '/tech-notes/os/beaglebone'
-- label: Coding
+      link: '/tech-notes/system/beaglebone'
+- label: Program
   items:
     - label: 'Basics'
-      link: '/tech-notes/coding/basics'
-    - label: 'GDB'
-      link: '/tech-notes/coding/gdb'
-    - label: 'Valgrind'
-      link: '/tech-notes/coding/valgrind'
+      link: '/tech-notes/program/basics'
+    - label: 'Debugging'
+      link: '/tech-notes/program/debugging'
     - label: 'C++ Notes'
-      link: '/tech-notes/coding/cpp'
+      link: '/tech-notes/program/cpp'
 - label: Robotics
   items:
     - label: 'Perception'
