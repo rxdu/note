@@ -1,6 +1,9 @@
 # vscode
 .vscode
 
+# clion
+.idea
+
 # Logs
 logs
 *.log
