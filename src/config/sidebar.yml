@@ -6,12 +6,10 @@
   items:
     - label: 'Linux'
       link: '/tech-notes/system/linux'
-    - label: 'RTOS'
-      link: '/tech-notes/system/rtos'
-    - label: 'RaspberryPi'
-      link: '/tech-notes/system/raspberrypi'
-    - label: 'BeagleBone'
-      link: '/tech-notes/system/beaglebone'
+    - label: 'OS'
+      link: '/tech-notes/system/os'
+    - label: 'SBC'
+      link: '/tech-notes/system/sbc'
 - label: Program
   items:
     - label: 'Basics'

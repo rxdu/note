@@ -1,6 +1,6 @@
 ---
 title: How A Simulator Works
-description: 
+description:
 ---
 
 ## Robot Simulator
@@ -19,8 +19,8 @@ As to the simulation step, it involves sensing and rendering. The physics engine
 
 Reference:
 
-* [Gazebo Document - Modifying a world : Physics Properties](http://gazebosim.org/tutorials/?tut=modifying_world)
-* [V-REP Document - Simulation](http://www.coppeliarobotics.com/helpFiles/en/simulation.htm)
+- [Gazebo Document - Modifying a world : Physics Properties](http://gazebosim.org/tutorials/?tut=modifying_world)
+- [V-REP Document - Simulation](http://www.coppeliarobotics.com/helpFiles/en/simulation.htm)
 
 ## Robot Simulation in V-REP
 
@@ -52,22 +52,22 @@ Once your robot is set up, you can now add more sensors to it. And according to 
 
 Now you've got a robot simulated and running in V-REP. What's next? You probably want to read sensor data from the simulated robot and do control over it. That's the main point you want to set up a simulator for it.
 
-V-REP provides a few methods to do so. Basically there are two types of interfacing methods: internal communication and inter-process communication. Refer to this * [tutorial](http://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm) to know more about the advantages and disadvantages of each method. If you want to use similar code to control both the simulated robot and the real robot, the remote API may be the best one to use. The work flow is that you first start a server when you start the simulation, then call the remote API functions in your normal control code to read sensor data and send motor commands. Your code acts as a client respect to the server. Watch this nice [video](https://www.youtube.com/watch?v=SQont-mTnfM) for an example and read this [article](http://www.coppeliarobotics.com/helpFiles/en/remoteApiModusOperandi.htm) to know more about the remote API. At this point, you should be able to have a much better understanding of these articles: [article1](http://www.coppeliarobotics.com/helpFiles/en/meansOfCommunication.htm), [article2](http://www.coppeliarobotics.com/helpFiles/en/writingCode.htm).
+V-REP provides a few methods to do so. Basically there are two types of interfacing methods: internal communication and inter-process communication. Refer to this \* [tutorial](http://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm) to know more about the advantages and disadvantages of each method. If you want to use similar code to control both the simulated robot and the real robot, the remote API may be the best one to use. The work flow is that you first start a server when you start the simulation, then call the remote API functions in your normal control code to read sensor data and send motor commands. Your code acts as a client respect to the server. Watch this nice [video](https://www.youtube.com/watch?v=SQont-mTnfM) for an example and read this [article](http://www.coppeliarobotics.com/helpFiles/en/remoteApiModusOperandi.htm) to know more about the remote API. At this point, you should be able to have a much better understanding of these articles: [article1](http://www.coppeliarobotics.com/helpFiles/en/meansOfCommunication.htm), [article2](http://www.coppeliarobotics.com/helpFiles/en/writingCode.htm).
 
 Another point that's worthy of mentioning is that there are different ways of communication between sensors and actuators as discussed in "Means of communication in and around V-REP". The regular API provides support for all of them, but it's not the case for the remote API. If a sensor is using tube to publish its data and you want to get the data via the remote API. One easy solution is that you can just modify the script of that sensor and use signals to send out data, which is a way that both regular API and remote API support.
 
 **Reference**
 
-* [Youtube Video - Line-Following Robot  V-Rep Tutorial](https://www.youtube.com/watch?v=xI-ZEewIzzI)
-* [V-REP Doc - The main script](http://www.coppeliarobotics.com/helpFiles/en/mainScript.htm)
-* [V-REP Doc - Child scripts](http://www.coppeliarobotics.com/helpFiles/en/childScripts.htm)
-* [V-REP Doc - Designing dynamic simulations](http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm)
-* [V-REP Tutorial - Importing and preparing rigid bodies tutorial](http://www.coppeliarobotics.com/helpFiles/en/rigidBodyTutorial.htm)
-* [V-REP Tutorial - External controller](http://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm)
-* [Youtube Video - Connect V-REP and Python through Remote API](https://www.youtube.com/watch?v=SQont-mTnfM)
-* [V-REP Doc - Remote API modus operandi](http://www.coppeliarobotics.com/helpFiles/en/remoteApiModusOperandi.htm)
-* [V-REP Doc - Means of communication in and around V-REP](http://www.coppeliarobotics.com/helpFiles/en/meansOfCommunication.htm)
-* [V-REP Doc - Writing code in and around V-REP](http://www.coppeliarobotics.com/helpFiles/en/writingCode.htm)
+- [Youtube Video - Line-Following Robot V-Rep Tutorial](https://www.youtube.com/watch?v=xI-ZEewIzzI)
+- [V-REP Doc - The main script](http://www.coppeliarobotics.com/helpFiles/en/mainScript.htm)
+- [V-REP Doc - Child scripts](http://www.coppeliarobotics.com/helpFiles/en/childScripts.htm)
+- [V-REP Doc - Designing dynamic simulations](http://www.coppeliarobotics.com/helpFiles/en/designingDynamicSimulations.htm)
+- [V-REP Tutorial - Importing and preparing rigid bodies tutorial](http://www.coppeliarobotics.com/helpFiles/en/rigidBodyTutorial.htm)
+- [V-REP Tutorial - External controller](http://www.coppeliarobotics.com/helpFiles/en/externalControllerTutorial.htm)
+- [Youtube Video - Connect V-REP and Python through Remote API](https://www.youtube.com/watch?v=SQont-mTnfM)
+- [V-REP Doc - Remote API modus operandi](http://www.coppeliarobotics.com/helpFiles/en/remoteApiModusOperandi.htm)
+- [V-REP Doc - Means of communication in and around V-REP](http://www.coppeliarobotics.com/helpFiles/en/meansOfCommunication.htm)
+- [V-REP Doc - Writing code in and around V-REP](http://www.coppeliarobotics.com/helpFiles/en/writingCode.htm)
 
 ## Case Study: Create a Quadrotor Simulation in V-REP
 
@@ -75,9 +75,9 @@ In this case study, you will see how to create the simulation of the AscTec Humm
 
 Components for the simulation:
 
-* Quadrotor main frame
-* 4 propellers
-* IMU sensor(gyro + accelerometer)
+- Quadrotor main frame
+- 4 propellers
+- IMU sensor(gyro + accelerometer)
 
 It's highly recommended to read this [official tutorial](http://www.coppeliarobotics.com/helpFiles/en/rigidBodyTutorial.htm) and follow the steps by yourself before you start creating a simulation of your own robot. This case study assumes you've already read the contents of this tutorial and the previous sections of this wiki. The goal is only to show you the work flow of using V-REP with a more specific example, thus a lot of operation details are omitted. If you get any problems in the process, **always remember** to check the [official documentation](http://www.coppeliarobotics.com/helpFiles/index.html) and the [official forum](http://www.forum.coppeliarobotics.com/index.php). In most cases you should be able to find the answer. It's also very common that you check the implementation of a existing robot model to get an idea of how to implement a specific feature on your own robot. The example robot models and scenes provided by V-REP are very good resources for you to learn V-REP. In addition, you can try to post your question on the forum. According to my experience, they respond to questions very fast.
 
@@ -89,11 +89,11 @@ V-REP provides a very powerful tool to create and modify mechanical model. It's 
 
 Download the stl file for the hummingbird quadrotor from the AscTec [wiki](http://wiki.asctec.de/display/AR/CAD+Models). Import the model into V-REP.
 
-![Import STL](../../../images/simulation/vrep_import_quad.png)
+![Import STL](./figures/vrep_import_quad.png)
 
 If you want the simulated quadrotor to look better, you can now divide the model into smaller parts and apply textures to different parts.
 
-![Model Texture](../../../images/simulation/vrep_model_texture.png)
+![Model Texture](./figures/vrep_model_texture.png)
 
 ### Create a simplified dynamic model for simulation
 
@@ -101,7 +101,7 @@ For this imported stl model, it's usually non-convex and not proper for dynamic 
 
 In this example, the quadrotor frame is abstracted as a sphere with four cuboid shapes.
 
-![Visual and Dynamic Model](../../../images/simulation/vrep_two_models.png)
+![Visual and Dynamic Model](./figures/vrep_two_models.png)
 
 Don't forget the adjust the properties of the dynamic model, such as mass, inertia.
 
@@ -109,13 +109,13 @@ Don't forget the adjust the properties of the dynamic model, such as mass, inert
 
 V-REP provides the model of a propeller with particle simulation so you can use it directly on the quadrotor. You can find the model from /components/locomotion in the model browser. Add four of the propeller into the scene and adjust the position of each.
 
-![Add Propellers](../../../images/simulation/vrep_quad_prop.png)
+![Add Propellers](./figures/vrep_quad_prop.png)
 
 If you want the simulated Hummingbird to be more like the real one in appearance, you can hide the visible parts of the provided propeller model and use a better-looking propeller model. For example, you can download this propeller model from [GrabCAD site](https://grabcad.com/library/8x3-8-propeller-1).
 
 V-REP also provides models for the sensors. Simply drag a gyro and a accelerometer into the scene and place them at a proper position on the quadrotor. The final quadrotor model is shown in the image below. You can also check the hierarchy structure of the simulated robot in this screenshot.
 
-![Simulated Hummingbird](../../../images/simulation/vrep_quad_final.png)
+![Simulated Hummingbird](./figures/vrep_quad_final.png)
 
 ### Write code to interface with the quadrotor
 

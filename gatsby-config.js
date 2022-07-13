@@ -20,6 +20,7 @@ module.exports = {
         docsPath: `src/docs`,
         repositoryUrl: `https://github.com/rxdu/note`,
         baseDir: `/`,
+        withMdx: "true"
       },
     },
     {
@@ -44,9 +45,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://rocketdocs.netlify.app`,
+        siteUrl: `https://note.rdu.im`,
       },
     },
     `gatsby-plugin-offline`,
+    // image support
+    // `gatsby-plugin-sharp`,
+    // `gatsby-remark-images`,
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 1200,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/docs`,
+      },
+    },
   ],
 };
