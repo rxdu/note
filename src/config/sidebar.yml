@@ -4,36 +4,30 @@
   link: https://rdu.im
 - label: System
   items:
-    - label: 'Linux'
-      link: '/tech-notes/system/linux'
     - label: 'OS'
       link: '/tech-notes/system/os'
-    - label: 'SBC'
+    - label: 'Hardware'
       link: '/tech-notes/system/sbc'
 - label: Program
   items:
-    - label: 'Basics'
-      link: '/tech-notes/program/basics'
-    - label: 'Debugging'
-      link: '/tech-notes/program/debugging'
-    - label: 'C++ Notes'
+    - label: 'C++'
       link: '/tech-notes/program/cpp'
+    - label: 'Python'
+      link: '/tech-notes/program/python'
+    - label: 'Tools'
+      link: '/tech-notes/program/tools'
 - label: Robotics
   items:
-    - label: 'Perception'
-      link: '/tech-notes/robotics/perception'
+    - label: 'Sensing'
+      link: '/tech-notes/robotics/sensing'
     - label: 'Planning'
       link: '/tech-notes/robotics/planning'
     - label: 'Control'
       link: '/tech-notes/robotics/control'
     - label: 'Simulation'
       link: '/tech-notes/robotics/simulation'
-    - label: 'Visualization'
-      link: '/tech-notes/robotics/visualization'
-    - label: 'Robot System'
-      link: '/tech-notes/robotics/robot_system'
-    - label: 'Book List'
-      link: '/tech-notes/robotics/refbook'
+    - label: 'Reference'
+      link: '/tech-notes/robotics/reference'
 - label: HOWTOs
   items:
     - label: 'HOWTO List'
