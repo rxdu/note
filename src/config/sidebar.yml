@@ -6,10 +6,10 @@
   items:
     - label: 'OS'
       link: '/tech-notes/system/os'
-    - label: 'Cloud'
-      link: '/tech-notes/system/cloud'
     - label: 'Hardware'
       link: '/tech-notes/system/hardware'
+    - label: 'Application'
+      link: '/tech-notes/system/application'
 - label: Program
   items:
     - label: 'C++'
