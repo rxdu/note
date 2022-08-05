@@ -4,12 +4,12 @@
   link: https://rdu.im
 - label: System
   items:
-    - label: 'OS'
-      link: '/tech-notes/system/os'
+    - label: 'Software'
+      link: '/tech-notes/system/software'
     - label: 'Hardware'
       link: '/tech-notes/system/hardware'
-    - label: 'Application'
-      link: '/tech-notes/system/application'
+    # - label: 'Application'
+    #   link: '/tech-notes/system/application'
 - label: Program
   items:
     - label: 'C++'
