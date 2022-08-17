@@ -24,6 +24,12 @@ On the remote server:
 $ cat ~/.ssh/my_sshkey.pub >> ~/.ssh/authorized_keys
 ```
 
+A simpler method to copy the public key to the remote server is to use the "ssh-copy-id" tool.
+
+```
+$ ssh-copy-id -i ~/.ssh/my_sshkey.pub <username>@<server-address>
+```
+
 Now you can try the SSH access on the local machine:
 
 ```bash
