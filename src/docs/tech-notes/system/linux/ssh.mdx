@@ -78,7 +78,7 @@ With the "-A" option, you can use your SSH credentials on the server just like y
 If you want to SSH into a second server (target server) through the first server (bridge server) from you local computer, you can use ProxyJump.
 
 ```bash
-$ ssh -J <target-server> <bridge-server>
+$ ssh -J <bridge-server> <target-server> 
 ```
 
 You can also setup the ProxyJump from your ssh config file:
