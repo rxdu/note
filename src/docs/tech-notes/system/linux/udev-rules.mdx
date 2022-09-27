@@ -49,7 +49,7 @@ KERNEL=="video[0-10]", SUBSYSTEM=="video4linux", ATTR{index}=="0", KERNELS=="1-8
 You can use the following command to find the attribute information of a device node:
 
 ```bash
-$ udevinfo -a -p $(udevinfo -q path -n /dev/video0)
+$ udevadm info -a -p $(udevadm info -q path -n /dev/video0)
 ```
 
 You can use the attributes of the device node or additional attributes from one of its parents to create a match condition. Note that you can not mix attributes from different parents.
