@@ -43,6 +43,35 @@ $ ros2 node list
 $ ros2 node info <node_name>
 ```
 
+### ROS lifecycle
+
+```bash
+# output a list of nodes with lifecycle
+$ ros2 lifecycle nodes
+# output a list of available transitions for a node
+$ ros2 lifecycle list <node_name>
+# get lifecycle state of a node
+$ ros2 lifecycle get <node_name>
+# trigger lifecycle state transition of a node
+$ ros2 lifecycle set <node_name> <transition>
+```
+
+Possible transitions to invoke are [4]:
+
+* configure
+* activate
+* deactivate
+* cleanup
+* shutdown
+
+### ROS daemon
+
+```bash
+$ ros2 daemon start/status/stop
+```
+
+The ROS2 daemon is a node that helps to accelerate the node discovery process. It is not required to run ROS2 nodes but it makes the newly started node to discover other nodes faster, which is especially useful for CLI commands like "ros2 node list".
+
 ### ROS topic
 
 ```bash
@@ -122,6 +151,20 @@ $ ros2 action info <action_name>
 $ ros2 action send_goal <action_name> <action_type> <values>
 ```
 
+### ROS bag
+
+```bash
+$ ros2 bag record <topic_name>
+$ ros2 bag info <bag_file_name>
+$ ros2 bag play <bag_file_name>
+```
+
+```bash
+# commonly used arguments
+$ ros2 bag record -a -o <bag_file_name>
+$ ros2 bag play -l <bag_file_name>
+```
+
 ### ROS multicast
 
 ```bash
@@ -143,8 +186,31 @@ $ sudo ufw allow in proto udp to 224.0.0.0/4
 $ sudo ufw allow in proto udp from 224.0.0.0/4
 ```
 
+## Build Tools: colcon
+
+### Build workspace
+
+```bash
+$ colcon build --symlink-install
+# build the selected package only
+$ colcon build --symlink-install --packages-select <package_name>
+# build the selected package and its dependencies
+$ colcon build --symlink-install --packages-up-to <package_name>
+# build the selected package and packages that depends on it
+$ colcon build --symlink-install --packages-above <package_name>
+```
+
+The "--symlink-install" option is to create a symlink to the build directory instead of copying the files. "This allows the installed files to be changed by changing the files in the source space (e.g. Python files or other not compiled resourced) for faster iteration."
+
+### Run tests
+
+```bash
+$ colcon test
+```
+
 ## Reference
 
 * [1] https://docs.ros.org/en/humble/Concepts/About-Domain-ID.html
 * [2] https://github.com/ubuntu-robotics/ros2_cheats_sheet
 * [3] https://docs.ros.org/en/rolling/How-To-Guides/Installation-Troubleshooting.html#enable-multicast
+* [4] https://github.com/ros2/demos/blob/humble/lifecycle/README.rst
