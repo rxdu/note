@@ -16,8 +16,10 @@
       link: '/tech-notes/program/cpp'
     - label: 'Python'
       link: '/tech-notes/program/python'
-    - label: 'Tools'
+    - label: 'Tool'
       link: '/tech-notes/program/tools'
+    - label: 'Library'
+      link: '/tech-notes/program/library'
 - label: Robotics
   items:
     - label: 'Sensing'
@@ -42,8 +44,6 @@
       link: '/collection/resource/course'
     - label: 'Tech Blog'
       link: '/collection/misc/blog'
-    - label: 'Software'
-      link: '/collection/resource/software'
     # - label: 'Reference'
     #   link: '/collection/resource/reference'
 # - label: Miscellaneous
